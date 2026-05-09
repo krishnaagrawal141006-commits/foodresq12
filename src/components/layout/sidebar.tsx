@@ -56,7 +56,7 @@ export default function Sidebar({ navItems, role }: SidebarProps) {
       <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
-          const IconComponent = (Icons as Record<string, React.ComponentType<{ className?: string; size?: number }>>)[item.icon] || Icons.Circle;
+          const IconComponent = (Icons as any)[item.icon] || Icons.Circle;
 
           return (
             <Link
