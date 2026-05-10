@@ -12,7 +12,7 @@ interface StatCardProps {
 }
 
 export default function StatCard({ stat, index = 0 }: StatCardProps) {
-  const IconComponent = (Icons as Record<string, React.ComponentType<{ className?: string; size?: number }>>)[stat.icon] || Icons.Activity;
+  const IconComponent = (Icons as any)[stat.icon] || Icons.Activity;
 
   return (
     <motion.div
